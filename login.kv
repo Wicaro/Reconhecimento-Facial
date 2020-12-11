@@ -1,0 +1,80 @@
+
+<Login>:
+    BoxLayout
+        id: login_layout
+        orientation: 'vertical'
+        padding: [10,15,10,15]
+        spacing: 10
+
+        Label:
+            text: 'Seja Bem-Vindo'
+            font_size: 32
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: 'Nome'
+                font_size: 18
+                halign: 'left'
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: login
+                multiline:False
+                font_size: 15
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Cargo'
+                halign: 'left'
+                font_size: 18
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: identificador
+                multiline:False
+                font_size: 15
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Email'
+                halign: 'left'
+                font_size: 18
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: email
+                multiline:False
+                font_size: 15
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'CPF'
+                halign: 'left'
+                font_size: 18
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: cpf
+                multiline:False
+                font_size: 15
+
+        Button:
+            text: 'Tirar Foto'
+            font_size: 24
+            on_press: root.register_foto()
+            
+        Button:
+            text: 'Registrar'
+            font_size: 24
+            on_press: root.insert_values_in_dabatase()
+        Button:
+            text: 'Reconhecimento'
+            font_size: 24
+            on_press: root.eigen()
+        
+        
